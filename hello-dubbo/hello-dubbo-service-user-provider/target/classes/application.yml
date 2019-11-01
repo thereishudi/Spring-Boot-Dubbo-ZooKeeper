@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: hello-dubbo-service-user-provider
+
+
+user:
+  service:
+    version: 1.0.0
+
+
+dubbo:
+  scan:
+    basepackages: com.hd.hello.dubbo.service.user.provider.api
+  application:
+    id: hello-dubbo-service-user-provider
+    name: hello-dubbo-service-user-provider
+    qos-port: 55555
+    qos-enable: true
+  protocol:
+    id: dubbo
+    port: 12345
+    status: server
+  registry:
+    id: zookeeper
+    address: zookeeper://10.20.86.33:2181
